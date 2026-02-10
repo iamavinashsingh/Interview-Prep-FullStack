@@ -1,3 +1,5 @@
 ## Q1:- What is HTML and what is its purpose? 
-## Ans :-
-HTML (HyperText Markup Language) is a system of "tags" used to label pieces of content so a web browser understands their role and relationship to one another. It is not a programming language; it is a structural blueprint.HTML works through a "Tree" mechanism. When a browser reads your code, it creates a Document Object Model (DOM). This is a parent-child hierarchy where every element sits inside another.
+
+HTML (HyperText Markup Language) is the backbone of the web; it is a markup language used to define the semantic structure of a document so that browsers can render content in an organized and accessible way.
+### Purspose :
+Its primary purpose is to provide a standardized structure for content so that web browsers know how to organize and display text, images, and interactive elements.
