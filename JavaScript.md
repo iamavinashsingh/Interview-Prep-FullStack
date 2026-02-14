@@ -23,3 +23,10 @@ button.onclick = () => alert('You clicked me!');
   ```
 - **JavaScript has simple primitive types like strings and numbers, and complex reference types like objects and arrays.**
 ---
+
+### Q3 :- What is the difference between let, const, and var?
+- Back in the day, we only had var. The problem? var ignores boundaries like if statements or for loops. It leaks out into the rest of your code, causing massive headaches when variables accidentally get overwritten.
+- To fix this, JavaScript gave us let and const. They are "block-scoped," which just means they stay trapped inside the { } brackets where you put them. They don't leak.
+  - Use let when the value is going to change later.
+  - Use const when the value shouldn't be reassigned.
+- *The biggest trap in interviews! People say const means the value can never change. Wrong. If const is an array or object, you can absolutely push new items into it or change its properties. You just can't reassign the whole variable using a new = sign.*
