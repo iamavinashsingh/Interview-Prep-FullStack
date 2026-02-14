@@ -11,3 +11,15 @@ button.onclick = () => alert('You clicked me!');
 - **JavaScript is the logic layer of the web that makes static HTML pages interactive and dynamic.**.
 
 ---
+
+## Q2 :- Explain data types in JavaScript.
+- JavaScript has two main buckets of data:
+  - Simple stuff (Primitives): Text (strings), numbers, and true/false (booleans).
+  - Complex stuff (Reference types): Objects (like a user profile) and Arrays (lists of things).
+  ```js
+  let age = 25;           // Simple (Number)
+  let name = "PrepAce";   // Simple (String)
+  let user = { id: 1 };   // Complex (Object)
+  ```
+- **JavaScript has simple primitive types like strings and numbers, and complex reference types like objects and arrays.**
+---
