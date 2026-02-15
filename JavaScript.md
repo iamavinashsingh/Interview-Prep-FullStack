@@ -153,4 +153,4 @@ Accessing a variable in this zone causes a **ReferenceError**.
 
 ---
 
-
+# Q5 :- What are closures and how do they work?
