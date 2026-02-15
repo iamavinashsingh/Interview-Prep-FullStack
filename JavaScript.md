@@ -1,6 +1,6 @@
 # Basic 
 
-## Q1 :- What is JavaScript and how does it work in browsers?
+# Q1 :- What is JavaScript and how does it work in browsers?
 - JavaScript is the language that handles the logic. It makes dead, static HTML pages alive, interactive, and dynamic.
 - You use it to grab things on the screen and change them. For example, doing something when a user clicks a button:
 ```js
@@ -12,7 +12,7 @@ button.onclick = () => alert('You clicked me!');
 
 ---
 
-## Q2 :- Explain data types in JavaScript.
+# Q2 :- Explain data types in JavaScript.
 - JavaScript has two main buckets of data:
   - Simple stuff (Primitives): Text (strings), numbers, and true/false (booleans).
   - Complex stuff (Reference types): Objects (like a user profile) and Arrays (lists of things).
@@ -24,7 +24,7 @@ button.onclick = () => alert('You clicked me!');
 - **JavaScript has simple primitive types like strings and numbers, and complex reference types like objects and arrays.**
 ---
 
-## Q3 :- What is the difference between let, const, and var?
+# Q3 :- What is the difference between let, const, and var?
 - Back in the day, we only had var. The problem? var ignores boundaries like if statements or for loops. It leaks out into the rest of your code, causing massive headaches when variables accidentally get overwritten.
 - To fix this, JavaScript gave us let and const. They are "block-scoped," which just means they stay trapped inside the { } brackets where you put them. They don't leak.
   - Use let when the value is going to change later.
@@ -34,7 +34,7 @@ button.onclick = () => alert('You clicked me!');
 
 ---
 
-## Q4: Explain Hoisting in JavaScript
+# Q4: Explain Hoisting in JavaScript
 
 ### What is Hoisting?
 
