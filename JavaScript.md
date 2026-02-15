@@ -36,15 +36,12 @@ button.onclick = () => alert('You clicked me!');
 
 ## Q4: Explain Hoisting in JavaScript
 
----
-
 ### What is Hoisting?
 
 **Hoisting** in JavaScript means that during the **memory creation phase** (before code execution), JavaScript processes **variable and function declarations**.
 
 > JavaScript remembers *names first*, assigns *values later*.
 
----
 
 ### Key Points (Interview-Oriented)
 
@@ -55,7 +52,6 @@ button.onclick = () => alert('You clicked me!');
 * Only **declarations** are hoisted, not assignments
 * Hoisting behavior differs for `var`, `let`, `const`, and functions
 
----
 
 ## Function Hoisting (Easiest to Understand)
 
@@ -80,7 +76,7 @@ function sayHello() {
 
 > Function declarations are hoisted completely, so they can be called before they are defined.
 
----
+
 
 ## Variable Hoisting with `var`
 
@@ -116,7 +112,6 @@ a = 10;       // assignment stays in place
 
 > Variables declared with `var` are hoisted and initialized with `undefined`.
 
----
 
 ## Variable Hoisting with `let` and `const` (Important)
 
@@ -141,7 +136,7 @@ Yes — but **differently**:
 * They are **not initialized**
 * They exist in the **Temporal Dead Zone (TDZ)**
 
----
+
 
 ## Temporal Dead Zone (TDZ)
 
