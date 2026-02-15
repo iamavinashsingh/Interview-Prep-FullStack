@@ -24,9 +24,138 @@ button.onclick = () => alert('You clicked me!');
 - **JavaScript has simple primitive types like strings and numbers, and complex reference types like objects and arrays.**
 ---
 
-### Q3 :- What is the difference between let, const, and var?
+## Q3 :- What is the difference between let, const, and var?
 - Back in the day, we only had var. The problem? var ignores boundaries like if statements or for loops. It leaks out into the rest of your code, causing massive headaches when variables accidentally get overwritten.
 - To fix this, JavaScript gave us let and const. They are "block-scoped," which just means they stay trapped inside the { } brackets where you put them. They don't leak.
   - Use let when the value is going to change later.
   - Use const when the value shouldn't be reassigned.
 - *The biggest trap in interviews! People say const means the value can never change. Wrong. If const is an array or object, you can absolutely push new items into it or change its properties. You just can't reassign the whole variable using a new = sign.*
+
+
+---
+
+## Q4: Explain Hoisting in JavaScript
+
+---
+
+### What is Hoisting?
+
+**Hoisting** in JavaScript means that during the **memory creation phase** (before code execution), JavaScript processes **variable and function declarations**.
+
+> JavaScript remembers *names first*, assigns *values later*.
+
+---
+
+### Key Points (Interview-Oriented)
+
+* JavaScript executes code in **two phases**:
+
+  1. **Memory Creation Phase** – declarations are processed
+  2. **Execution Phase** – code runs line by line
+* Only **declarations** are hoisted, not assignments
+* Hoisting behavior differs for `var`, `let`, `const`, and functions
+
+---
+
+## Function Hoisting (Easiest to Understand)
+
+```js
+sayHello();
+
+function sayHello() {
+  console.log("Hello!");
+}
+```
+
+### What Happens?
+
+* JavaScript already knows about `sayHello` before execution
+* The function runs without any error
+
+### Why?
+
+* **Function declarations are fully hoisted** (both name and body)
+
+**Interview Line:**
+
+> Function declarations are hoisted completely, so they can be called before they are defined.
+
+---
+
+## Variable Hoisting with `var`
+
+### Example
+
+```js
+console.log(a);
+var a = 10;
+```
+
+### Output
+
+```
+undefined
+```
+
+### Why No Error?
+
+Internally, JavaScript interprets the code like this:
+
+```js
+var a;        // declaration hoisted
+console.log(a);
+a = 10;       // assignment stays in place
+```
+
+### Important Notes
+
+* Declaration is hoisted
+* Assignment is **not** hoisted
+
+**Interview Line:**
+
+> Variables declared with `var` are hoisted and initialized with `undefined`.
+
+---
+
+## Variable Hoisting with `let` and `const` (Important)
+
+### Example
+
+```js
+console.log(b);
+let b = 20;
+```
+
+### Output
+
+```
+ReferenceError: Cannot access 'b' before initialization
+```
+
+### Are `let` and `const` Hoisted?
+
+Yes — but **differently**:
+
+* They are hoisted
+* They are **not initialized**
+* They exist in the **Temporal Dead Zone (TDZ)**
+
+---
+
+## Temporal Dead Zone (TDZ)
+
+The time period between:
+
+* Entering the scope
+* And the actual declaration line
+
+Accessing a variable in this zone causes a **ReferenceError**.
+
+**Interview Line:**
+
+> `let` and `const` are hoisted but remain in the Temporal Dead Zone until their declaration is evaluated.
+
+---
+
+
